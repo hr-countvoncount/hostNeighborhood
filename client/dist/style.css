@@ -1,0 +1,306 @@
+
+/* body{
+	margin: 117.5px;
+	margin-top: -100px;
+	max-width: 696px;
+	width:  696px;
+	padding: 24px;
+	color: #484848;;
+	display: block;
+	line-height: 1.375em;
+	text-size-adjust: 100%;
+	box-sizing: border-box;
+	object-position: 50% 50%;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.375em;
+	-webkit-font-smoothing: antialiased;
+} */
+
+ .mainDiv{
+	max-width: 648px;
+ }
+ .mainDivNeighborhood {
+	font-display: auto;
+    max-width: 80%;
+	margin-top: 50px;
+	color: rgb(72, 72, 72);
+	display: block;
+	height: 506px;
+	width: 648px;
+	line-height: 20.02px;
+	text-size-adjust: 100%;
+	box-sizing: border-box;
+	object-position: 50% 50%;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+} 
+
+.hostAvatar {
+	width: 20%;
+	height: 20%;
+	background-color: #D8D8D8;
+	border-radius: 90%;
+	border-width: 2px;
+	border-color: #ffffff;
+	width: 80px;
+	height: 80px;
+	position: relative;
+	left: 90%;
+	top: 110px;
+}
+
+
+.hostedBy {
+	font-display: auto;
+	margin: 0px;
+	word-wrap: break-word;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 1.25em;
+	color: #484848;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 8px;
+	position: relative;
+    left: 5px;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.icons{
+	position: relative;
+    left: 4px;
+}
+.littleIcons {
+	color: #484848;
+	margin-right: 16px;
+	margin-top: -40px;
+	padding: 2px;
+	display: flex;
+	align-content: center;
+	text-align: center;
+	position: relative;
+	left: 0.5%;
+	word-wrap: break-word;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.375em;
+	font-display: auto;
+}
+
+
+.iconText {
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: -2px;
+}
+
+.referencesText {
+		position: relative;
+		bottom: 2.5px;
+		left: -3px;
+}
+
+.verifiedText {
+	position: relative;
+	bottom: 3px;
+	left: 3px
+}
+
+.locationOfTheHost {
+	margin-top: -20px;
+	word-wrap: break-word;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.375em;
+	color: #484848;
+	font-display: auto;
+}
+
+.quickInfoAboutHost{
+	text-size-adjust: 100%;
+    box-sizing: border-box;
+    object-position: 50% 50%;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+	line-height: 12px;
+	font-display: auto;
+}
+
+.mostOfTheTextOnPage {
+	margin: 0px;
+	word-wrap: break-word;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.375em;
+	color: #484848;
+	font-display: auto;
+}
+
+.linkToLearnMore{
+	color: #008489;
+	margin: 0px;
+	word-wrap: break-word;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.375em;
+	text-decoration: none;
+	font-display: auto;
+}
+
+.linkToLearnMore:visited{
+	text-decoration: none
+}
+.contactHostButton {
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: normal;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-weight: 600;
+	border-width: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: -30px;
+	box-shadow: none;
+	background: transparent;
+	border-color: #008489;
+	color: #008489;
+	font-display: auto;
+}
+
+.divAroundContactButton {
+	margin-top: 16px;
+	margin-bottom: 24px;
+}
+
+
+.cancelationsPolicies {
+	margin-top: 360px;
+	padding-top: 20px;
+	display: inline-block;
+	height: 506px;
+	width: 648px;
+	text-size-adjust: 100%;
+	box-sizing: border-box;
+	object-position: 50% 50%;
+	max-width: 696px;
+	width:  696px;
+	color: #484848;;
+	line-height: 1.375em;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	font-display: auto;
+}
+
+.showMoreOrLess {
+	color: #008489;
+	margin: 0px;
+	word-wrap: break-word;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	font-display: auto;
+	line-height: 1.375em;
+}
+
+
+.hostHr {
+	border-bottom-width: 1px !important;
+	border-color: #EBEBEB !important;
+	opacity: 0.3 !important;
+}
+
+.mapContainer {
+	height: 348px;
+	width: 648px;
+	margin-bottom: -350px;
+
+}
+
+.chatView {
+	height: 500px
+}
+
+.message {
+	border: gray;
+	text-align: right;
+	padding: 15px;
+	position: relative;
+	right: 10px;
+	margin-bottom: 10px;
+	margin-left: 200px;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.375em;
+	color: #d1d1d1;
+	background-color: #008489;
+	list-style-type: none;
+	font-display: auto;
+}
+
+.closeChat {
+	position: absolute;
+	color: white;
+	background-color: #484848;
+	right: 10px;
+	border-radius: 50%
+}
+
+.messageSentAt {
+	color: white;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 10px;
+	font-weight: 300;
+	line-height: 1.375em;
+	font-display: auto;
+}
+
+form {
+	position: absolute;
+	top: 21px;
+	right: 45px;
+}
+
+.sendMessageButton {
+	background-color: #008489;
+	color: white;
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.375em;
+	height: 25px;
+	font-display: auto;
+}
+
+.inputForMessageToSend {
+	height: 20px
+}
+
+.allSpans {display: block;
+font-size: 1.17em;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-weight: bold;
+}
