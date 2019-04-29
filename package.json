@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start server/index.js && webpack -d --watch",
+    "start": "nodemon server/index.js && webpack -d --watch",
     "stop": "pm2 stop all",
     "build": "webpack --mode production",
     "populate": "pm2 start postgres/populateDB.js -i max",
     "deleteAll": "pm2 delete all",
     "list": "pm2 list",
-    "log": "pm2 log"
+    "log": "pm2 log",
+    "populateMongo": "node --max-old-space-size=8192 --optimize-for-size mongoDb/populateMongo.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,9 @@
     "fast-csv": "^2.4.1",
     "google-map-react": "^1.1.4",
     "mocha": "^6.1.2",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.4",
+    "nodemon": "^1.18.11",
     "path": "^0.12.7",
     "pg": "^7.10.0",
     "pm2": "^3.5.0",
