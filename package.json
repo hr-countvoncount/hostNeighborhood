@@ -4,14 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js && webpack -d --watch",
+    "start": "nodemon server/index.js",
     "stop": "pm2 stop all",
-    "build": "webpack --mode production",
-    "populate": "pm2 start postgres/populateDB.js -i max",
-    "deleteAll": "pm2 delete all",
-    "list": "pm2 list",
-    "log": "pm2 log",
-    "populateMongo": "node --max-old-space-size=8192 --optimize-for-size mongoDb/populateMongo.js"
+    "build": "webpack -p --watch",
+    "populate": "node mongodb/promise.js"
   },
   "repository": {
     "type": "git",

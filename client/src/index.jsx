@@ -33,11 +33,12 @@ export class App extends React.Component {
       .then(host => {
         this.setState(
           {
-            host: host.data[0]
+            host: host.data
           },
           () => this.getProperAddress(this.state.host.location)
         );
-      })
+       }
+      )
       .catch(err => {
         console.error(err);
       });

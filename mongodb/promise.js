@@ -6,7 +6,7 @@ const url = "mongodb://localhost:27017";
 MongoClient.connect(url, {useNewUrlParse: true}).then(client => {
   const db = client.db('airbnb');
 
-  const collection = db.collection("host")
+  const collection = db.collection("messages")
 
   let reviewCount = 0;
   let reviewId = 1;
@@ -14,11 +14,11 @@ MongoClient.connect(url, {useNewUrlParse: true}).then(client => {
   const createReviews = async () => {
     
     let reviews = [];
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 1; i++) {
       reviews.push({
         id: reviewId,
-        host: faker.name.firstName(),
-        message: faker.lorem.sentences()
+        toHost: faker.name.firstName(),
+        messageBody: faker.lorem.sentences()
       })
       reviewId++;
     }
@@ -26,7 +26,7 @@ MongoClient.connect(url, {useNewUrlParse: true}).then(client => {
   };
 
   const insertBulk = () => {
-    if (reviewCount < 10000) {
+    if (reviewCount < 1) {
       reviewCount++;
       createReviews().then(()=>{
         insertBulk();

@@ -1,16 +1,10 @@
 const express = require('express')
-const database = require('../mongodb/mongoose.js')
+const mongoose = require('mongoose')
 const parser = require('body-parser')
 const path = require('path')
 const cors = require('cors');
-const populateMongo = require('../mongodb/populateMongo.js').populateMongo;
 // const {pool} = require('../postgres/postgres.js');
-
-// db.find(query).toArray(function(err, result) {
-//     if (err) throw err;
-//     console.log(result);	
-//     client.close();
-//   });
+const {Message, Neighborhood} = require('../mongodb/mongoose.js');
 
 // set up header to prevent CORS errors and use in middleware
 const headers = {
@@ -21,20 +15,57 @@ const headers = {
 }
 
 const app = express()
-database.initializeMongo();
 
 app.use(parser.json())
 app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
 app.use(cors(headers));
 
+// console.log('host: ', Message.db.host); // localhost
+// console.log('port: ', Message.db.port); // 27017
+// console.log('database name: ', Message.db.name); // myDatabase
 
-app.get('/mongo', (req, res)=>{
-	database.Data.find((err, data)=>{
-		if (err) return res.error(err);
-		console.log('THIS MY DATA: ', data);
-		res.json(data)
-	})
-	res.send('success')
+app.get('/host/:id', async (req, res)=>{
+	// console.log('Body: ', req.body.id)
+	// console.log('Params: ', req.params.id)
+	Neighborhood.findOne({'id':req.params.id})
+		.then((data)=>{
+			// console.log(data);
+			res.status(201).send(data)
+		})
+})
+
+app.post('/contact/:host/message', async (req, res)=>{
+	console.log('toHost: ', req.params.host)
+	console.log('messageBody: ', req.body.messageBody)
+	Message.findOneAndUpdate(
+		//find it by checking these properties
+		{
+			"toHost":req.params.host,
+			"messageBody":req.body.messageBody
+		},
+		//create or update a new Repo
+		{
+			"toHost":req.params.host,
+			"messageBody":req.body.messageBody
+		},{
+			upsert: true
+		})
+		.exec()
+		.then((data)=>{
+			console.log(data);
+			res.status(200).send(data)
+		})
+		.catch((err) => console.log(err))
+})
+
+app.get('/contact/:host/message', async (req, res)=>{
+	// console.log('Body: ', req.body.id)
+	console.log('HOST: ', req.params.host)
+	Message.find({'toHost':req.params.host})
+		.then((data)=>{
+			console.log(data);
+			res.status(200).send(data)
+		})
 })
 
 
