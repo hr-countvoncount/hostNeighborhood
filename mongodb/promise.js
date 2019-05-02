@@ -14,7 +14,7 @@ MongoClient.connect(url, {useNewUrlParse: true}).then(client => {
   const createReviews = async () => {
     
     let reviews = [];
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 1000; i++) {
       reviews.push({
         id: reviewId,
         toHost: faker.name.firstName(),
@@ -26,7 +26,7 @@ MongoClient.connect(url, {useNewUrlParse: true}).then(client => {
   };
 
   const insertBulk = () => {
-    if (reviewCount < 1) {
+    if (reviewCount < 10000) {
       reviewCount++;
       createReviews().then(()=>{
         insertBulk();

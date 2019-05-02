@@ -135,7 +135,7 @@ MongoClient.connect(url,{ useNewUrlParser: true }).then(client => {
     let reviews = [];
     for (let i = 0; i < 100; i++) {
       reviews.push({
-        id: ids[i],
+        id: reviewId,
         name: faker.name.findName(),
         joined: faker.date.past(),
         location: adresses[i],
