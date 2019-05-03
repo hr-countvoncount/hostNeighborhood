@@ -43,7 +43,7 @@ class Chat extends React.Component {
   getMessages() {
     let host = this.props.host;
     axios
-      .get(`/contact/${host}/message`) // add absolute path EC2
+      .get(`http://18.205.27.90/contact/${host}/message`) // add absolute path EC2
       .then(data => {
         this.setState({
           messages: data.data
@@ -65,7 +65,7 @@ class Chat extends React.Component {
     let message = this.state.messageText;
 
     axios({
-      url: `/contact/${host}/message`, // add absolute path EC2
+      url: `http://18.205.27.90/contact/${host}/message`, // add absolute path EC2
       method: "post",
       data: { /// sets the body of the request 
         messageBody: message,
