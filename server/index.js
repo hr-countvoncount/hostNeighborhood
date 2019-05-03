@@ -25,11 +25,11 @@ app.use(cors(headers));
 //   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 // });
 
-app.get("/loaderio-b5547ff1e67e4eeeefe8c0c10521a42e", (req, res) => {
+app.get("/:id/loaderio-65c1c4e330a0bec3a7b4e6a6e6989fd5.txt", (req, res) => {
   res.sendFile(
     path.join(
       __dirname,
-      "/client/dist/loaderio-b5547ff1e67e4eeeefe8c0c10521a42e.txt"
+      "../client/dist/loaderio-65c1c4e330a0bec3a7b4e6a6e6989fd5.txt"
     )
   );
 });
