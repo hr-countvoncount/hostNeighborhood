@@ -133,12 +133,12 @@ MongoClient.connect(url,{ useNewUrlParser: true }).then(client => {
 
   const createReviews = async () => {
     let reviews = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 1; i < 1001; i++) {
       reviews.push({
         id: reviewId,
         name: faker.name.findName(),
         joined: faker.date.past(),
-        location: adresses[i],
+        location: adresses[Math.floor((i)/10)],
         city: faker.address.city(),
         numberOfReviews: faker.random.number(),
         numberOfReferences: faker.random.number(),
@@ -168,7 +168,7 @@ MongoClient.connect(url,{ useNewUrlParser: true }).then(client => {
   };
 
   const insertBulk = () => {
-    if (reviewCount < 100000) {
+    if (reviewCount < 10000) {
       reviewCount++;
       createReviews().then(()=>{
         insertBulk();
