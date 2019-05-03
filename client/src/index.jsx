@@ -29,7 +29,7 @@ export class App extends React.Component {
   getHost() {
     let id = window.location.href.split("/")[3];
     axios
-      .get(`/host/${id}`) // add absolute path to EC2 for deployment
+      .get(`http://18.205.27.90/host/${id}`) // add absolute path to EC2 for deployment
       .then(host => {
         this.setState(
           {

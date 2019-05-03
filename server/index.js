@@ -17,12 +17,22 @@ const headers = {
 const app = express()
 
 app.use(parser.json())
+// app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
 app.use(cors(headers));
 
-// console.log('host: ', Message.db.host); // localhost
-// console.log('port: ', Message.db.port); // 27017
-// console.log('database name: ', Message.db.name); // myDatabase
+// app.get("/:id", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+// });
+
+app.get("/loaderio-b5547ff1e67e4eeeefe8c0c10521a42e", (req, res) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "../client/dist/loaderio-b5547ff1e67e4eeeefe8c0c10521a42e.txt"
+    )
+  );
+});
 
 app.get('/host/:id', async (req, res)=>{
 	// console.log('Body: ', req.body.id)

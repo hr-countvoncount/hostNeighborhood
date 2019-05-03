@@ -28,6 +28,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
+    "compression-webpack-plugin": "^2.0.0",
     "cors": "^2.8.5",
     "css-loader": "^2.1.1",
     "csv-write-stream": "^2.0.0",
